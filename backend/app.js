@@ -7,7 +7,7 @@ app.listen (3000, () => {
     console.log('Servidor escuchando en el puerto 3000');
 });
 app.get('/', (req, res) => {
-    res.send('¡Hola, dedesde el back')
+    res.send('Esta va a ser mi pinche pagina web, la mejor del mundo mundial');
 })  
 
 // Prueba creando usuarios y mostrandolos
@@ -25,14 +25,3 @@ const usuarios =[
             edad: 30
         }
     ]
-app.get("/usuarios", (req, res) => {    
-res.json(usuarios)
-})
-
-app.get("/usuarios/:id", (req, res) => {
-    const userId = req.params.id;
-    console.log(userId);
-    const usuario = usuarios.find(user => user.id === userId);
-    console.log(usuario);
-})
-
